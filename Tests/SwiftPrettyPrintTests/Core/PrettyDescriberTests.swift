@@ -18,6 +18,7 @@ class PrettyDescriberTests: XCTestCase {
 
     override func tearDown() {}
 
+    #if !os(WASI)
     ///
     /// Basic type that support explicitly
     ///
@@ -51,7 +52,7 @@ class PrettyDescriberTests: XCTestCase {
             }
         }
     }
-    
+    #endif
     ///
     /// Basic type that support not explicitly
     ///
