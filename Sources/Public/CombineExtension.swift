@@ -113,11 +113,11 @@
                         switch format {
                         case .singleline:
                             Swift.print("receive \(label): ", terminator: "", to: &colored)
-                            Pretty.print(value, option: option, colored: colored, to: &colored)
+                            Pretty.print(value, option: option, to: &colored)
 
                         case .multiline:
                             Swift.print("receive \(label):", to: &colored)
-                            Pretty.prettyPrint(value, option: option, colored: colored, to: &colored)
+                            Pretty.prettyPrint(value, option: option, to: &colored)
                         }
 
                         _out(plain, terminator: "", to: Pretty.plainLogStream)
